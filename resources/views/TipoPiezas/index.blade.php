@@ -3,7 +3,7 @@
 <div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/TipoPiezas/create')">Agregar</button></div>
  <table class="table table-bordered table-striped table-sm">
         <thead>
-        <tr id="row_{{ $row->id }}">
+        <tr >
             <th><i class="fas fa-toolbox"></i></th>
             <th>id</th>
             <th>forma</th>
@@ -18,7 +18,7 @@
       </thead>
         <tbody>
     @foreach($TipoPiezasList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/tipo_piezas/edit/{{ $row->id }}" title="Editar TipoPiezas" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar tipo_piezas" onclick="deleteTipoPiezas({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
@@ -52,7 +52,7 @@
             }).then((result) => {
                 if (result.value) {
                     $.post('/admin/TipoPiezas/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("row_{{id}}").remove()
+                      if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',
                             'tipo_piezas borrado.',

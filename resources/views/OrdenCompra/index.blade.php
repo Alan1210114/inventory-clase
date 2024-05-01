@@ -15,7 +15,7 @@
       </thead>
         <tbody>
     @foreach($OrdenCompraList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/orden_compra/edit/{{ $row->id }}" title="Editar OrdenCompra" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar orden_compra" onclick="deleteOrdenCompra({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

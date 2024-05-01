@@ -3,7 +3,7 @@
 <div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/Permisos/create')">Agregar</button></div>
  <table class="table table-bordered table-striped table-sm">
         <thead>
-        <tr id="row_{{ $row->id }}">
+        <tr>
             <th><i class="fas fa-toolbox"></i></th>
             <th>id</th>
             <th>nombrePermiso</th>
@@ -21,7 +21,7 @@
       </thead>
         <tbody>
     @foreach($PermisosList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/permisos/edit/{{ $row->id }}" title="Editar Permisos" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar permisos" onclick="deletePermisos({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
@@ -58,7 +58,7 @@
             }).then((result) => {
                 if (result.value) {
                     $.post('/admin/Permisos/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("row_{{id}}").remove()
+                      if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',
                             'permisos borrado.',

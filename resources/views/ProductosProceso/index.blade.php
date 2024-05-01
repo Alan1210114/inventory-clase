@@ -20,7 +20,7 @@
       </thead>
         <tbody>
     @foreach($ProductosProcesoList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/productos_proceso/edit/{{ $row->id }}" title="Editar ProductosProceso" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar productos_proceso" onclick="deleteProductosProceso({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
@@ -56,7 +56,7 @@
             }).then((result) => {
                 if (result.value) {
                     $.post('/admin/ProductosProceso/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("row_{{id}}").remove()
+                      if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',
                             'productos_proceso borrado.',

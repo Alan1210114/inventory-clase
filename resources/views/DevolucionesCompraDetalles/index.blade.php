@@ -14,7 +14,7 @@
       </thead>
         <tbody>
     @foreach($DevolucionesCompraDetallesList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/devoluciones_compra_detalles/edit/{{ $row->id }}" title="Editar DevolucionesCompraDetalles" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar devoluciones_compra_detalles" onclick="deleteDevolucionesCompraDetalles({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

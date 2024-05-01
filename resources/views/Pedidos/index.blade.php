@@ -15,7 +15,7 @@
       </thead>
         <tbody>
     @foreach($PedidosList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/pedidos/edit/{{ $row->id }}" title="Editar Pedidos" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar pedidos" onclick="deletePedidos({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

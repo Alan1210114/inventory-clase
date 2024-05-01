@@ -4,7 +4,6 @@
  <table class="table table-bordered table-striped table-sm">
         <thead>
         <tr>
-
             <th><i class="fas fa-toolbox"></i></th>
             <th>id</th>
             <th>nombreRol</th>
@@ -14,7 +13,7 @@
       </thead>
         <tbody>
     @foreach($RolesList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/roles/edit/{{ $row->id }}" title="Editar Roles" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar roles" onclick="deleteRoles({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

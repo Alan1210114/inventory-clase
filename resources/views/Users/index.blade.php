@@ -17,7 +17,7 @@
       </thead>
         <tbody>
     @foreach($UsersList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/users/edit/{{ $row->id }}" title="Editar Users" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar users" onclick="deleteUsers({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

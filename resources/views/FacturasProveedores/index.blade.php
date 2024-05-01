@@ -18,7 +18,7 @@
       </thead>
         <tbody>
     @foreach($FacturasProveedoresList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/facturas_proveedores/edit/{{ $row->id }}" title="Editar FacturasProveedores" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar facturas_proveedores" onclick="deleteFacturasProveedores({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

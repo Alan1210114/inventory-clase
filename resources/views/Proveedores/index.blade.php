@@ -15,7 +15,7 @@
       </thead>
         <tbody>
     @foreach($ProveedoresList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/proveedores/edit/{{ $row->id }}" title="Editar Proveedores" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar proveedores" onclick="deleteProveedores({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
@@ -46,7 +46,7 @@
             }).then((result) => {
                 if (result.value) {
                     $.post('/admin/Proveedores/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("row_"+id).remove()
+                      if (response.Error===0) { $("row_"+ id).remove()
                         Swal.fire(
                             'Borrado!',
                             'proveedores borrado.',

@@ -26,7 +26,7 @@
       </thead>
         <tbody>
     @foreach($PermisosRolesList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/permisos_roles/edit/{{ $row->id }}" title="Editar PermisosRoles" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar permisos_roles" onclick="deletePermisosRoles({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

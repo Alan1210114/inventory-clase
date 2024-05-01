@@ -18,7 +18,7 @@
       </thead>
         <tbody>
     @foreach($MaterialesList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/materiales/edit/{{ $row->id }}" title="Editar Materiales" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar materiales" onclick="deleteMateriales({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>

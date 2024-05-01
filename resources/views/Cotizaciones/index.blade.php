@@ -17,7 +17,7 @@
       </thead>
         <tbody>
     @foreach($CotizacionesList as $row)
-            <tr id="row_{{$row->id}}">
+            <tr>
                 <td>
                     <a href="/admin/cotizaciones/edit/{{ $row->id }}" title="Editar Cotizaciones" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar cotizaciones" onclick="deleteCotizaciones({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
