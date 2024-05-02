@@ -18,7 +18,7 @@ class CotizacionesController extends Controller
    public function index()
    {
     $cotizaciones = Cotizaciones::paginate(10);
-       return view('Cotizaciones.index')->with(['CotizacionesList'=>$cotizaciones,'Title'=>'Lista de cotizacioness','ActiveMenu'=>'cotizacioness']);
+       return view('cotizaciones.index')->with(['CotizacionesList'=>$cotizaciones,'Title'=>'Lista de cotizacioness','ActiveMenu'=>'cotizacioness']);
    }
 
    /**
@@ -30,7 +30,7 @@ class CotizacionesController extends Controller
    public function create()
    {
     $Clientess = Clientes::all();
-     return view('Cotizaciones.create')->with(['ClientesList'=>$Clientess,'Title'=>'Lista de cotizaciones','ActiveMenu'=>'cotizaciones']);
+     return view('cotizaciones.create')->with(['ClientesList'=>$Clientess,'Title'=>'Lista de cotizaciones','ActiveMenu'=>'cotizaciones']);
    }
 
    /**

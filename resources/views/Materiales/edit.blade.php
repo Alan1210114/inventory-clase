@@ -52,7 +52,7 @@
 <div class="alert-danger">{{ $errors->first('precio_costo') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('Materiales.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('materiales.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>

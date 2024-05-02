@@ -52,7 +52,7 @@
 <div class="alert-danger">{{ $errors->first('total') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('FacturasProveedores.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('facturasProveedores.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>

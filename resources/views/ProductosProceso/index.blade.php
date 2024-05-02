@@ -1,9 +1,9 @@
  @extends('layouts.admin')
  @section('contenido')
-<div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/ProductosProceso/create')">Agregar</button></div>
+<div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/productosProceso/create')">Agregar</button></div>
  <table class="table table-bordered table-striped table-sm">
         <thead>
-        <tr id="row_{{ $row->id }}">
+       <tr>
             <th><i class="fas fa-toolbox"></i></th>
             <th>id</th>
             <th>producto_id</th>
@@ -55,7 +55,7 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                    $.post('/admin/ProductosProceso/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
+                    $.post('/admin/productosProceso/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
                       if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',

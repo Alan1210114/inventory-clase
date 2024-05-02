@@ -39,7 +39,7 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                    $.post('/admin/Departamentos/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
+                    $.post('/admin/departamentos/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
                       if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',

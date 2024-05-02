@@ -115,7 +115,7 @@
 <div class="alert-danger">{{ $errors->first('MostrarDatos') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('PermisosRoles.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('permisosRoles.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>

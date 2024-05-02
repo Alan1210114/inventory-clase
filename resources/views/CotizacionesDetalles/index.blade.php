@@ -1,9 +1,9 @@
  @extends('layouts.admin')
  @section('contenido')
-<div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/CotizacionesDetalles/create')">Agregar</button></div>
+<div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/cotizacionesDetalles/create')">Agregar</button></div>
  <table class="table table-bordered table-striped table-sm">
         <thead>
-        <tr id="row_{{ $row->id }}">
+       <tr>
             <th><i class="fas fa-toolbox"></i></th>
             <th>id</th>
             <th>cotizaciones_id</th>
@@ -45,8 +45,8 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                    $.post('/admin/CotizacionesDetalles/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("row_{{id}}").remove()
+                    $.post('/admin/cotizacionesDetalles/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
+                      if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',
                             'cotizaciones_detalles borrado.',

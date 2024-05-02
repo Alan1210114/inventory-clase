@@ -80,7 +80,7 @@
 <div class="alert-danger">{{ $errors->first('color') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('Permisos.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('permisos.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>

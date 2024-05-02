@@ -18,7 +18,7 @@ class ClientesController extends Controller
    public function index()
    {
     $clientes = Clientes::paginate(10);
-       return view('Clientes.index')->with(['ClientesList'=>$clientes,'Title'=>'Lista de clientess','ActiveMenu'=>'clientess']);
+       return view('clientes.index')->with(['ClientesList'=>$clientes,'Title'=>'Lista de clientess','ActiveMenu'=>'clientess']);
    }
 
    /**
@@ -30,7 +30,7 @@ class ClientesController extends Controller
    public function create()
    {
     $Empresass = Empresas::all();
-     return view('Clientes.create')->with(['EmpresasList'=>$Empresass,'Title'=>'Lista de clientes','ActiveMenu'=>'clientes']);
+     return view('clientes.create')->with(['EmpresasList'=>$Empresass,'Title'=>'Lista de clientes','ActiveMenu'=>'clientes']);
    }
 
    /**

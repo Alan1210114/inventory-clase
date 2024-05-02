@@ -13,7 +13,7 @@
 <strong>Whoops!</strong> Hay error en los datos de entrada<br><br>
 </div>
 @endif
-<form class= "form-horizontal" action="{{ route('CotizacionesDetalles.create') }}" method="POST" method="POST" enctype="multipart/form-data">
+<form class= "form-horizontal" action="{{ route('cotizacionesDetalles.create') }}" method="POST" method="POST" enctype="multipart/form-data">
 @csrf
 <div class="card-body">
 <div class="form-group">
@@ -61,7 +61,7 @@
 <div class="alert-danger">{{ $errors->first('precio_venta') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('CotizacionesDetalles.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('cotizacionesDetalles.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>

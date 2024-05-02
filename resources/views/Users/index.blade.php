@@ -1,6 +1,6 @@
  @extends('layouts.admin')
  @section('contenido')
-<div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/Users/create')">Agregar</button></div>
+<div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/users/create')">Agregar</button></div>
  <table class="table table-bordered table-striped table-sm">
         <thead>
         <tr>
@@ -49,7 +49,7 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                    $.post('/admin/Users/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
+                    $.post('/admin/users/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
                       if (response.Error===0) { $("#row_"+id).remove()
                         Swal.fire(
                             'Borrado!',

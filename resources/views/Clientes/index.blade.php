@@ -39,8 +39,8 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                    $.post('/admin/Clientes/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("#row_"+id).remove()
+                    $.post('/admin/clientes/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
+                      if (response.Error===0) { $("#row_"+ id).remove()
                         Swal.fire(
                             'Borrado!',
                             'clientes borrado.',

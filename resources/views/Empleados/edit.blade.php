@@ -59,7 +59,7 @@
 <div class="alert-danger">{{ $errors->first('curp') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('Empleados.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('empleados.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>

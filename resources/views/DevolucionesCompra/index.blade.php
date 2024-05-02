@@ -3,7 +3,7 @@
 <div class="row"><button class="btn btn-success" onclick="window.location.assign('/admin/DevolucionesCompra/create')">Agregar</button></div>
  <table class="table table-bordered table-striped table-sm">
         <thead>
-        <tr id="row_{{ $row->id }}">
+       <tr>
             <th><i class="fas fa-toolbox"></i></th>
             <th>id</th>
             <th>fecha</th>
@@ -43,8 +43,8 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                    $.post('/admin/DevolucionesCompra/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
-                      if (response.Error===0) { $("row_{{id}}").remove()
+                    $.post('/admin/devolucionesCompra/delete/'+id,{"_token":"{{@csrf_token()}}","_method":"delete"},function(response){
+                      if (response.Error===0) { $("row_" + id).remove()
                         Swal.fire(
                             'Borrado!',
                             'devoluciones_compra borrado.',

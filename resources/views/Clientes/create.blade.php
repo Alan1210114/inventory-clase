@@ -13,7 +13,7 @@
 <strong>Whoops!</strong> Hay error en los datos de entrada<br><br>
 </div>
 @endif
-<form class= "form-horizontal" action="{{ route('Clientes.create') }}" method="POST" method="POST" enctype="multipart/form-data">
+<form class= "form-horizontal" action="{{ route('clientes.create') }}" method="POST" method="POST" enctype="multipart/form-data">
 @csrf
 <div class="card-body">
 <div class="form-group">
@@ -28,14 +28,14 @@
 <SELECT  name="empresa_id" id="empresa_id" class="form-control">
  <option value="">Seleccione una Opcion</option>
  @foreach($EmpresasList as $row )
- <option value="{{ $row->id }}" {{ ($row->id== $Clientes->empresa_id?'selected':'') }}>{{ $row->nombre_empresas }}</option>
+ <option value="{{ $row->id }}" {{ ($row->id== $Clientes->empresa_id?'selected':'') }}>{{ $row->nombre_empresa }}</option>
  @endforeach
 </SELECT>
 @if($errors->has('empresa_id'))
 <div class="alert-danger">{{ $errors->first('empresa_id') }}</div>
 @endif
 </div>
-<a class="btn btn-secondary" href="{{ route('Clientes.index') }}"> Regresar</a>
+<a class="btn btn-secondary" href="{{ route('clientes.index') }}"> Regresar</a>
 <button type="submit" class="btn btn-success">Grabar</button>
 </div>
 </form>
