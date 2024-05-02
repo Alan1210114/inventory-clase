@@ -13,13 +13,13 @@
 <strong>Whoops!</strong> Hay error en los datos de entrada<br><br>
 </div>
 @endif
-<form class= "form-horizontal" action="{{ route('empresas.update',$Empresas->id) }}" method="POST" enctype="multipart/form-data">
+<form class= "form-horizontal" action="{{ route('Empresas.update',$Empresas->id) }}" method="POST" enctype="multipart/form-data">
 @csrf
 @method('PATCH')
 <div class="card-body">
 <div class="form-group">
 <label for="nombre_empresas" class="col-sm-4 control-label">nombre_empresas</label>
-<input type="text" maxlength="400" name="nombre_empresas" id="nombre_empresas" value="{{ $Empresas->nombre_empresas }}" class="form-control" placeholder="nombre_empresas">
+<input type="text" maxlength="400" name="nombre_empresas" id="nombre_empresas" value="{{ $Empresas->nombre_empresa }}" class="form-control" placeholder="nombre_empresas">
 @if($errors->has('nombre_empresas'))
 <div class="alert-danger">{{ $errors->first('nombre_empresas') }}</div>
 @endif

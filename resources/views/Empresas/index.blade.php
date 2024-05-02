@@ -16,7 +16,7 @@
     @foreach($EmpresasList as $row)
             <tr>
                 <td>
-                    <a href="/admin/empresas/edit/{{ $row->id }}" title="Editar Empresas" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
+                    <a href="/admin/Empresas/edit/{{ $row->id }}" title="Editar Empresas" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar empresas" onclick="deleteEmpresas({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
                 </td>
                 <td>{{ $row->id }}</td>

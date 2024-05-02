@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ALCAVA Constructora</title>
-    <!-- favicons -->-v
+    <!-- favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
@@ -371,6 +371,7 @@
                         <!-- Add icons to the links using the .nav-icon classwith font-awesome or any other icon font library -->
                         @if (\Illuminate\Support\Facades\Auth::user() !== null)
                             @php
+                            $color='#FFFFFF';
                                 //$Menus = DB::raw('SELECT permisos.color,permisos.nombrePermiso,permisos.icon,permisos.image,permisos.route,permisos_roles.orden,permisos.isgroup,permisos.route FROM permisos_roles inner join permisos on permisos_roles.idPermiso=permisos.id where permisos_roles.idRol'.\Illuminate\Support\Facades\Auth::user()->idRole.' order by permisos_roles.orden asc');
                                 $Menus = DB::table('permisos_roles')
                                     ->select(
@@ -384,7 +385,7 @@
                                         'permisos.route',
                                     )
                                     ->join('permisos', 'permisos_roles.idPermiso', '=', 'permisos.id')
-                                    ->where('permisos_roles.idRol', '=', Auth::user()->id)
+                                    ->where('permisos_roles.idRol', '=', Auth::user()->idRole)
                                     ->orderBy('permisos_roles.orden', 'ASC')
                                     ->get();
                                 //dd($Menus);
