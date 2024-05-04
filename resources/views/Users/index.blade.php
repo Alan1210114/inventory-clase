@@ -8,7 +8,6 @@
             <th>id</th>
             <th>name</th>
             <th>email</th>
-            <th>empresa_id</th>
             <th>idRole</th>
             <th>created_at</th>
             <th>updated_at</th>
@@ -20,12 +19,11 @@
             <tr>
                 <td>
                     <a href="/admin/users/edit/{{ $row->id }}" title="Editar Users" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
-                    <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar users" onclick="deleteUsers({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
+                    <a href="/admin/users/delete/{{ $row->id }}" class="btn btn-xs btn-outline-danger" title="Borrar users" onclick="deleteUsers({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
                 </td>
                 <td>{{ $row->id }}</td>
                 <td>{{ $row->name }}</td>
                 <td>{{ $row->email }}</td>
-                <td>{{ $row->empresa_id }}</td>
                 <td>{{ $row->idRole }}</td>
                 <td>{{ $row->created_at }}</td>
                 <td>{{ $row->updated_at }}</td>

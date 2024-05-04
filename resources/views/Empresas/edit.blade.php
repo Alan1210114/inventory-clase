@@ -5,7 +5,7 @@
 <div class="col-md-12">
 <div class="card">
 <div class="card-header">
-<h2 class="">Editar empresas</h2>
+<h2 class="">Editar empresa</h2>
 </div>
 <div class="pull-right">
 @if ($errors->any())
@@ -18,10 +18,10 @@
 @method('PATCH')
 <div class="card-body">
 <div class="form-group">
-<label for="nombre_empresas" class="col-sm-4 control-label">nombre_empresas</label>
-<input type="text" maxlength="400" name="nombre_empresas" id="nombre_empresas" value="{{ $Empresas->nombre_empresa }}" class="form-control" placeholder="nombre_empresas">
+<label for="nombre_empresa" class="col-sm-4 control-label">nombre_empresa</label>
+<input type="text" maxlength="400" name="nombre_empresa" id="nombre_empresa" value="{{ $Empresas->nombre_empresa }}" class="form-control" placeholder="nombre_empresa">
 @if($errors->has('nombre_empresas'))
-<div class="alert-danger">{{ $errors->first('nombre_empresas') }}</div>
+<div class="alert-danger">{{ $errors->first('nombre_empresa') }}</div>
 @endif
 </div>
 <a class="btn btn-secondary" href="{{ route('empresas.index') }}"> Regresar</a>

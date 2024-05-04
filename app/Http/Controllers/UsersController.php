@@ -17,7 +17,7 @@ class UsersController extends Controller
    public function index()
    {
     $users = Users::paginate(10);
-       return view('Users.index')->with(['UsersList'=>$users,'Title'=>'Lista de userss','ActiveMenu'=>'userss']);
+       return view('Users.index')->with(['UsersList'=>$users,'Title'=>'Lista de users','ActiveMenu'=>'users']);
    }
 
    /**
@@ -52,9 +52,10 @@ class UsersController extends Controller
      $users->email = $request->email;
      $users->empresa_id = $request->empresa_id;
      $users->idRole = $request->idRole;
+     $users->password = $request->password;
      $users->created_at = $request->created_at;
      $users->updated_at = $request->updated_at;
-     $users->deleted_at = $request->deleted_at;
+     //$users->deleted_at = $request->deleted_at;
     $users->save();
    return redirect('/admin/users');
    }
@@ -105,11 +106,12 @@ class UsersController extends Controller
    $users = Users::find($id);
      $users->name = $request->name;
      $users->email = $request->email;
-     $users->empresa_id = $request->empresa_id;
+     //$users->empresa_id = $request->empresa_id;
      $users->idRole = $request->idRole;
+     $users->password = $request->password;
      $users->created_at = $request->created_at;
      $users->updated_at = $request->updated_at;
-     $users->deleted_at = $request->deleted_at;
+     //$users->deleted_at = $request->deleted_at;
  if ($validator->fails()) {
   return back()
      ->withErrors($validator->messages())

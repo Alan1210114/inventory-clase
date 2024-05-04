@@ -45,6 +45,13 @@
 @endif
 </div>
 <div class="form-group">
+<label for="empresa_id" class="col-sm-4 control-label">empresa_id</label>
+<input type="text" maxlength="20" name="empresa_id" id="empresa_id"  class="form-control" placeholder="empresa_id">
+@if($errors->has('empresa_id'))
+<div class="alert-danger">{{ $errors->first('empresa_id') }}</div>
+@endif
+</div>
+<div class="form-group">
 <label for="fecha_nacimiento" class="col-sm-4 control-label">fecha_nacimiento</label>
 <input type="date" name="fecha_nacimiento" id="fecha_nacimiento"  class="form-control" placeholder="fecha_nacimiento">
 @if($errors->has('fecha_nacimiento'))

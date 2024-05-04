@@ -32,10 +32,10 @@
 @endif
 </div>
 <div class="form-group">
-<label for="empresa_id" class="col-sm-4 control-label">empresa_id</label>
-<input type="text" maxlength="20" name="empresa_id" id="empresa_id" value="{{ $Users->empresa_id }}" class="form-control" placeholder="empresa_id">
-@if($errors->has('empresa_id'))
-<div class="alert-danger">{{ $errors->first('empresa_id') }}</div>
+<label for="email" class="col-sm-4 control-label">password</label>
+<input type="password" maxlength="600" name="password" id="password" value="{{ $Users->password }}" class="form-control" placeholder="password">
+@if($errors->has('password'))
+<div class="alert-danger">{{ $errors->first('password') }}</div>
 @endif
 </div>
 <div class="form-group">

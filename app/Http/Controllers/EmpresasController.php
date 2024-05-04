@@ -17,7 +17,7 @@ class EmpresasController extends Controller
    public function index()
    {
     $empresas = Empresas::paginate(10);
-       return view('Empresas.index')->with(['EmpresasList'=>$empresas,'Title'=>'Lista de empresass','ActiveMenu'=>'empresass']);
+       return view('empresas.index')->with(['EmpresasList'=>$empresas,'Title'=>'Lista de empresa','ActiveMenu'=>'empresas']);
    }
 
    /**
@@ -28,7 +28,7 @@ class EmpresasController extends Controller
     */
    public function create()
    {
-     return view('Empresas.create')->with(['Title'=>'Lista de empresas','ActiveMenu'=>'empresas']);
+     return view('Empresas.create')->with(['Title'=>'Lista de empresa','ActiveMenu'=>'empresas']);
    }
 
    /**
@@ -48,7 +48,7 @@ class EmpresasController extends Controller
      ->withInput($request->input());
 }
    $empresas = new Empresas;
-     $empresas->nombre_empresas = $request->nombre_empresas;
+     $empresas->nombre_empresa = $request->nombre_empresa;
      $empresas->created_at = $request->created_at;
      $empresas->updated_at = $request->updated_at;
      $empresas->deleted_at = $request->deleted_at;
@@ -100,7 +100,7 @@ class EmpresasController extends Controller
   $validator = Validator::make($request->all(), [
    ]);
    $empresas = Empresas::find($id);
-     $empresas->nombre_empresas = $request->nombre_empresas;
+     $empresas->nombre_empresa = $request->nombre_empresa;
      $empresas->created_at = $request->created_at;
      $empresas->updated_at = $request->updated_at;
      $empresas->deleted_at = $request->deleted_at;

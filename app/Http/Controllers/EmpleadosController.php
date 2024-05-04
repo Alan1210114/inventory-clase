@@ -17,7 +17,7 @@ class EmpleadosController extends Controller
    public function index()
    {
     $empleados = Empleados::paginate(10);
-       return view('Empleados.index')->with(['EmpleadosList'=>$empleados,'Title'=>'Lista de empleadoss','ActiveMenu'=>'empleadoss']);
+       return view('Empleados.index')->with(['EmpleadosList'=>$empleados,'Title'=>'Lista de empleados','ActiveMenu'=>'empleados']);
    }
 
    /**
@@ -52,11 +52,12 @@ class EmpleadosController extends Controller
      $empleados->apellido_paterno = $request->apellido_paterno;
      $empleados->apellido_materno = $request->apellido_materno;
      $empleados->departamento_id = $request->departamento_id;
+     $empleados-> empresa_id = $request->empresa_id;
      $empleados->fecha_nacimiento = $request->fecha_nacimiento;
      $empleados->curp = $request->curp;
      $empleados->created_at = $request->created_at;
-     $empleados->updated_at = $request->updated_at;
-     $empleados->deleted_at = $request->deleted_at;
+     //$empleados->updated_at = $request->updated_at;
+     //$empleados->deleted_at = $request->deleted_at;
     $empleados->save();
    return redirect('/admin/empleados');
    }

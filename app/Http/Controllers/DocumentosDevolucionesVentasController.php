@@ -17,7 +17,7 @@ class DocumentosDevolucionesVentasController extends Controller
    public function index()
    {
     $documentos_devoluciones_ventas = DocumentosDevolucionesVentas::paginate(10);
-       return view('DocumentosDevolucionesVentas.index')->with(['DocumentosDevolucionesVentasList'=>$documentos_devoluciones_ventas,'Title'=>'Lista de documentos_devoluciones_ventass','ActiveMenu'=>'documentos_devoluciones_ventass']);
+       return view('DocumentosDevolucionesVentas.index')->with(['DocumentosDevolucionesVentasList'=>$documentos_devoluciones_ventas,'Title'=>'Lista de documentos_devoluciones_ventas','ActiveMenu'=>'documentos_devoluciones_ventas']);
    }
 
    /**

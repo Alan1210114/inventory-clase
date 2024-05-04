@@ -22,7 +22,7 @@
             <tr>
                 <td>
                     <a href="/admin/empleados/edit/{{ $row->id }}" title="Editar Empleados" class="btn btn-xs btn-outline-primary"><i class="fas fa-edit"></i></a>
-                    <a href="#" class="btn btn-xs btn-outline-danger" title="Borrar empleados" onclick="deleteEmpleados({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
+                    <a href="/admin/empleados/delete/{{$row->id}}" class="btn btn-xs btn-outline-danger" title="Borrar empleados" onclick="deleteEmpleados({{ $row->id }})"><i class="fas fa-trash-alt"></i></a>
                 </td>
                 <td>{{ $row->id }}</td>
                 <td>{{ $row->nombre }}</td>
